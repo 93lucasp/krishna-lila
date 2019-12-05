@@ -10,5 +10,13 @@ title3: corso di massaggio ayurvedico e riflessologia plantare
 page3: /corsi-seminari/corso-di-massaggio-ayurvedico-e-riflessologia-plantare
 title4: corso di cucina
 page4: /corsi-seminari/corso-di-cucina
+title5: ''
+page5: ''
+title6: ''
+page6: ''
+title7: ''
+page7: ''
+title8: ''
+page8: ''
 ---
 
