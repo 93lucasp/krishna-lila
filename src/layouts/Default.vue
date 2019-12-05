@@ -1,69 +1,6 @@
 <template>
   <div>
-    <header class="header py-3">
-      <div class="container d-lg-flex align-items-center justify-content-between">
-        <g-link to="/" class="nav__link">
-          <g-image src="~/images/krishna-lila.png" class="header__logo" />
-        </g-link>
-        <nav class="nav">
-          <ul class="list-unstyled d-lg-flex align-items-center m-0">
-            <li class="position-relative py-2 py-lg-0">
-              <g-link class="nav__link mx-3 py-3" to="/snippets">Chi siamo</g-link>
-            </li>
-            <li class="position-relative py-2 py-lg-0">
-              <a class="nav__link mx-3 py-3" href="javascript:void(0)">
-                Trattamenti ayurvedici
-                <i class="fas fa-chevron-down ml-2"></i>
-              </a>
-              <ul class="dropdown list-unstyled w-100">
-                <li>
-                  <g-link
-                    class="nav__link mx-3 py-1 d-inline-block"
-                    to="/events/"
-                  >Trattamenti ayurvedici</g-link>
-                </li>
-                <li>
-                  <g-link
-                    class="nav__link mx-3 py-1 d-inline-block"
-                    to="/events/"
-                  >Trattamenti ayurvedici</g-link>
-                </li>
-                <li>
-                  <g-link
-                    class="nav__link mx-3 py-1 d-inline-block"
-                    to="/events/"
-                  >Trattamenti ayurvedici</g-link>
-                </li>
-                <li>
-                  <g-link
-                    class="nav__link mx-3 py-1 d-inline-block"
-                    to="/events/"
-                  >Trattamenti ayurvedici</g-link>
-                </li>
-                <li>
-                  <g-link
-                    class="nav__link mx-3 py-1 d-inline-block"
-                    to="/events/"
-                  >Trattamenti ayurvedici</g-link>
-                </li>
-              </ul>
-            </li>
-            <li class="position-relative py-2 py-lg-0">
-              <g-link class="nav__link mx-3 py-3" to="/newsletter/">Consulenze energetiche</g-link>
-            </li>
-            <li class="position-relative py-2 py-lg-0">
-              <g-link class="nav__link mx-3 py-3" to="/about/">Corsi e Seminari</g-link>
-            </li>
-            <li class="position-relative py-2 py-lg-0">
-              <g-link class="nav__link mx-3 py-3" to="/about/">Viaggi</g-link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="hamburger-container d-block d-lg-none" @click="hamburger()">
-        <div class="hamburger"></div>
-      </div>
-    </header>
+    <Navbar />
     <!-- <div class="container mb-40">
       <slot />
     </div>-->
@@ -123,7 +60,11 @@
 
 
 <script>
+import Navbar from "~/components/Navbar.vue";
 export default {
+  components: {
+    Navbar
+  },
   methods: {
     hamburger: function(el) {
       document
@@ -181,6 +122,7 @@ export default {
   }
 }
 .header {
+  color: #333;
   position: relative;
   &__logo {
     width: 160px;
