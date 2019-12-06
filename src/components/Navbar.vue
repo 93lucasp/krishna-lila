@@ -12,7 +12,7 @@
             class="position-relative py-2 py-lg-0"
           >
             <g-link :to="link.node.page" class="nav__link mx-3 py-3">{{link.node.title}}</g-link>
-            <ul class="dropdown list-unstyled w-100" v-if="link.node.submenu == true ">
+            <ul class="dropdown list-unstyled" v-if="link.node.submenu == true ">
               <li v-if="link.node.title1 !== ''">
                 <g-link
                   class="nav__link mx-3 py-1 d-inline-block"
@@ -118,7 +118,7 @@
         </ul>
       </nav>
     </div>
-    <div class="hamburger-container d-block d-lg-none" @click="hamburger()">
+    <div class="hamburger-container d-flex align-items-center d-lg-none" @click="hamburger()">
       <div class="hamburger"></div>
     </div>
     <!-- - {{$static.links.edges}} - -->
@@ -159,7 +159,16 @@ query {
 </static-query>
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  methods: {
+    hamburger: function(el) {
+      document
+        .querySelector(".hamburger")
+        .classList.toggle("hamburger--active");
+      document.querySelector("nav").classList.toggle("nav--active");
+      document.querySelector("body").classList.toggle("overflow-hidden");
+    }
+  }
 };
 </script>
 

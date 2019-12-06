@@ -1,99 +1,66 @@
 <template>
-  <Layout>
-    <h1 class="text-3xl md:text-4xl font-bold mb-3">Articles <i class="fas fa-book-reader ml-2 text-2xl"></i></h1>
-    <div class="flex items-start rounded bg-primary px-8 py-3 mb-16">
-      <div>
-        <i class="fas fa-info text-xs"></i>
-      </div>
-      <p class="ml-6 font-light">
-        Our articles are published on
-        <span class="font-bold">Medium</span>, we write for free and only Medium through the
-        <a
-          href="https://medium.com/creators"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Medium Partner Program</a> allows us to get a remuneration for the commitment. <br>
-        The links of Medium that we provide guarantee everyone <b>free access</b> to all our articles.
-
-      </p>
-    </div>
-
-    <ul class="articles-list">
-      <li
-        v-for="article in $page.articles.edges"
-        :key="article.id"
-        class="article rounded mb-16 md:flex relative p-10 bg-primary"
-      >
-        <div>
-          <div
-            class="article__preview rounded bg-cover bg-center md:mr-8"
-            :style="{ 'background-image': 'url(' + article.node.image + ')' }"
-          ></div>
-        </div>
-        <div>
-          <h1
-            class="article__title text-2xl md:text-3xl font-bold leading-tight mb-4"
-          >{{article.node.title}}</h1>
-          <p class="article__abstract text-lg md:text-xl mb-4 font-light">{{article.node.abstract}}</p>
-          <div class="flex items-center mb-5 text-sm">
-            <p>{{article.node.author}}</p>
-            <span class="mx-2">-</span>
-            <p>{{formatDate(article.node.date)}}</p>
+  <Layout class="position-relative">
+    <HeroHome />
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-lg-3 boxCourse boxCourse--1 d-flex align-items-center"
+          style="background-image: url('https://images.unsplash.com/photo-1502230831726-fe5549140034?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')"
+        >
+          <a href="/" class="boxCourse__link"></a>
+          <div class="boxCourse__body">
+            <h1 class="boxCourse__title mb-3">Consulenze energetiche</h1>
+            <div class="boxCourse__line mb-3"></div>
+            <p
+              class="boxCourse__description mb-4"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
           </div>
-          <a :href="article.node.link" target="_blank" class="article__link py-2 px-10 rounded block text-center md:inline-block">
-            Read on Medium
-            <i class="fas fa-external-link-alt ml-2"></i>
-          </a>
         </div>
-      </li>
-    </ul>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-    <hr>
-    manual
-    <ul>
-      <li>
-        <g-link to="/blog-html/blog-post-one">Post 1</g-link>
-      </li>
-      <li>
-        <g-link to="/blog-html/blog-post-two">Post 2</g-link>
-      </li>
-      <li>
-        <g-link to="/blog-html/blog-post-three">Post 3</g-link>
-      </li>
-    </ul>
-
-    <hr>
-  dynamic
-    <ul>
-      <li v-for="post in $page.posts.edges" :key="post.id">
-        <g-link :to="post.node.path">
-          {{post.node.title}}
-        </g-link>
-      </li>
-    </ul>
-    <hr>-->
-    <!-- <ul>
-      <li class="article" v-for="postReddit in $page.redditPost.edges" :key="postReddit.id">
-        <div>
-          <div
-            class="article__img"
-            :style="{'background-image': 'url(' + postReddit.node.thumbnail + ')'}"
-          ></div>
+        <div
+          class="col-lg-3 boxCourse boxCourse--2 d-flex align-items-center"
+          style="background-image: url('https://images.unsplash.com/photo-1551718748-bb05729e1a66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80')"
+        >
+          <a href="/" class="boxCourse__link"></a>
+          <div class="boxCourse__body">
+            <h1 class="boxCourse__title mb-3">Corsi</h1>
+            <div class="boxCourse__line mb-3"></div>
+            <p
+              class="boxCourse__description mb-4"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
+          </div>
         </div>
-        <div>
-          <h1 class="article__title">{{postReddit.node.title}}</h1>
-          <g-link :to="postReddit.node.link">Read</g-link>
+        <div
+          class="col-lg-3 boxCourse boxCourse--3 d-flex align-items-center"
+          style="background-image: url('https://images.unsplash.com/photo-1523832083691-c772f31be296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80')"
+        >
+          <a href="/" class="boxCourse__link"></a>
+          <div class="boxCourse__body">
+            <h1 class="boxCourse__title mb-3">Trattamenti</h1>
+            <div class="boxCourse__line mb-3"></div>
+            <p
+              class="boxCourse__description mb-4"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
+          </div>
         </div>
-      </li>
-    </ul>-->
+        <div
+          class="col-lg-3 boxCourse boxCourse--4 d-flex align-items-center"
+          style="background-image: url('https://images.unsplash.com/photo-1531642765602-5cae8bbbf285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=618&q=80')"
+        >
+          <a href="/" class="boxCourse__link"></a>
+          <div class="boxCourse__body">
+            <h1 class="boxCourse__title mb-3">Viaggi</h1>
+            <div class="boxCourse__line mb-3"></div>
+            <p
+              class="boxCourse__description mb-4"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -114,7 +81,11 @@ query {
 }
 </page-query>
 <script>
+import HeroHome from "~/components/HeroHome.vue";
 export default {
+  components: {
+    HeroHome
+  },
   metaInfo: {
     // meta: [
     //   {
@@ -151,14 +122,95 @@ export default {
   },
   methods: {
     formatDate(date) {
-      var newDate = new Date(date)
-      var options =  { year: 'numeric', month: 'short', day: 'numeric' }
-      return(newDate.toLocaleDateString('en',options ))
+      var newDate = new Date(date);
+      var options = { year: "numeric", month: "short", day: "numeric" };
+      return newDate.toLocaleDateString("en", options);
     }
   }
 };
 </script>
 
 <style lang="scss">
+.boxCourse {
+  background-size: cover;
+  background-position: center;
 
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 300px;
+  padding: 30px 0;
+
+  &__body {
+    width: 80%;
+  }
+  // &__btn {
+  //   background-color: #743237;
+  //   color: #fff;
+  //   border-radius: 0;
+  //   z-index: 2;
+  //   position: relative;
+  //   transition: all 0.2s;
+  //   transform: translateX(-20px);
+  //   opacity: 0;
+  //   &:hover {
+  //     background-color: #743237;
+  //     color: #fff;
+  //   }
+  // }
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  &__line {
+    z-index: 2;
+    position: relative;
+    background-color: #333;
+    width: 50px;
+    height: 1px;
+    transition: all 0.2s;
+    transform: translateX(20px);
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.2s;
+    transform: translateX(80px);
+  }
+  &__description {
+    position: relative;
+    font-size: 18px;
+    z-index: 2;
+    color: #333;
+    transition: all 0.2s;
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  &:hover {
+    .boxCourse__title {
+      transform: translateX(30px);
+    }
+    .boxCourse__description {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    .boxCourse__line {
+      transform: translateX(200px);
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
 </style>

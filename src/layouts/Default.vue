@@ -1,8 +1,9 @@
 <template>
   <div>
     <Navbar />
+    <slot />
     <!-- <div class="container mb-40">
-      <slot />
+      
     </div>-->
 
     <!-- <hr /> -->
@@ -64,29 +65,23 @@ import Navbar from "~/components/Navbar.vue";
 export default {
   components: {
     Navbar
-  },
-  methods: {
-    hamburger: function(el) {
-      document
-        .querySelector(".hamburger")
-        .classList.toggle("hamburger--active");
-      document.querySelector("nav").classList.toggle("nav--active");
-    }
   }
 };
 </script>
 <style lang="scss">
 .hamburger-container {
   width: 30px;
-  height: 30px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  z-index: 9;
 }
 .hamburger {
   width: 26px;
   height: 1px;
   background-color: #333;
-  position: absolute;
-  top: 50px;
-  right: 30px;
+
   z-index: 9;
 
   &:before {
@@ -94,7 +89,7 @@ export default {
     width: 30px;
     height: 1px;
     background-color: #333;
-    top: -8px;
+    top: 0;
     position: absolute;
     transition: all 0.2s;
   }
@@ -103,7 +98,7 @@ export default {
     width: 30px;
     height: 1px;
     background-color: #333;
-    top: 8px;
+    top: 100%;
     position: absolute;
     transition: all 0.2s;
   }
@@ -111,12 +106,12 @@ export default {
     background-color: transparent;
     &:before {
       background-color: #333;
-      top: 0;
+      top: 50%;
       transform: rotate(45deg);
     }
     &:after {
       background-color: #333;
-      top: 0;
+      top: 50%;
       transform: rotate(-45deg);
     }
   }
@@ -129,18 +124,23 @@ export default {
   }
   .nav {
     @media screen and (max-width: 992px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
       // @include size(94%, 20em);
       opacity: 0;
       background-color: #fff;
       height: 100%;
       width: 100%;
       position: fixed;
-      top: 110px;
+      top: 90px;
       right: 0;
       bottom: 0;
       left: -100%;
       transition: all 0.2s;
-      &--active {
+      z-index: 9;
+    }
+    &--active {
+      @media screen and (max-width: 992px) {
         left: 0%;
         opacity: 1;
       }
@@ -149,10 +149,14 @@ export default {
   .dropdown {
     position: absolute;
     top: 120%;
-    background: #ccc;
+    background: #fff;
     padding: 20px 0;
     display: none;
     z-index: 1;
+    width: 250px;
+    -webkit-box-shadow: 0px 2px 9px -2px rgba(82, 83, 94, 0.63);
+    -moz-box-shadow: 0px 2px 9px -2px rgba(82, 83, 94, 0.63);
+    box-shadow: 0px 2px 9px -2px rgba(82, 83, 94, 0.63);
   }
   @media screen and (max-width: 992px) {
     // @include size(94%, 20em);
