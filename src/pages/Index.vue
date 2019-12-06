@@ -192,7 +192,7 @@ export default {
     transition: all 0.2s;
     transform: translateX(-20px);
     opacity: 0;
-    @media screen and (max-width: 992px) { transform: translateX(30px);}
+    @media screen and (max-width: 992px) { opacity:1;transform: translateX(30px);}
   }
   &:hover {
     .boxCourse__title {
