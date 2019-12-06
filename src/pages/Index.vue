@@ -172,6 +172,7 @@ export default {
     height: 1px;
     transition: all 0.2s;
     transform: translateX(20px);
+     @media screen and (max-width: 992px) { transform: translateX(200px);}
   }
   &__title {
     position: relative;
@@ -181,6 +182,7 @@ export default {
     font-weight: bold;
     transition: all 0.2s;
     transform: translateX(80px);
+    @media screen and (max-width: 992px) { transform: translateX(30px);}
   }
   &__description {
     position: relative;
@@ -190,6 +192,7 @@ export default {
     transition: all 0.2s;
     transform: translateX(-20px);
     opacity: 0;
+    @media screen and (max-width: 992px) { transform: translateX(30px);}
   }
   &:hover {
     .boxCourse__title {
