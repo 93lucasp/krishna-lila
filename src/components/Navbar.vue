@@ -166,7 +166,8 @@ export default {
         .querySelector(".hamburger")
         .classList.toggle("hamburger--active");
       document.querySelector("nav").classList.toggle("nav--active");
-      document.querySelector("body").classList.toggle("overflow-hidden");
+      document.querySelector("html, body").classList.toggle("overflow-hidden");
+      
     }
   }
 };

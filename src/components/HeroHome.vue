@@ -28,8 +28,14 @@ export default {
   background-size: cover;
   background-position-y: -130px;
   background-position-x: center;
+  background-repeat: no-repeat;
   position: relative;
   color: #fff;
+   @media screen and (max-width: 992px) {
+     height: 500px;
+     background-position-y: center;
+     background-position-x: center;
+   }
   &__title {
     position: relative;
     z-index: 1;
@@ -43,7 +49,7 @@ export default {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 </style>
