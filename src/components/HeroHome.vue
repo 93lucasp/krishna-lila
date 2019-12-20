@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <h1 class="heroHome__title">
+          <h1 class="heroHome__title" data-aos="fade-up" data-aos-duration="1000">
             "Lo yoga non prende tempo, ti restituisce il tempo."
             <br />- Ganga Bianco
           </h1>

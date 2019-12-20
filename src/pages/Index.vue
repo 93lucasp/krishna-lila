@@ -6,10 +6,11 @@
         <div
           class="col-lg-3 boxCourse boxCourse--1 d-flex align-items-center"
           style="background-image: url('/uploads/energy.svg')"
+          data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
         >
           <a href="/" class="boxCourse__link"></a>
           <div class="boxCourse__body">
-            <h1 class="boxCourse__title mb-3">Consulenze energetiche</h1>
+            <h1 class="boxCourse__title mb-3">Consulenze <br> energetiche</h1>
             <div class="boxCourse__line mb-3"></div>
             <p
               class="boxCourse__description mb-4"
@@ -20,6 +21,7 @@
         <div
           class="col-lg-3 boxCourse boxCourse--2 d-flex align-items-center"
           style="background-image: url('/uploads/yoga.svg')"
+           data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
         >
           <a href="/" class="boxCourse__link"></a>
           <div class="boxCourse__body">
@@ -34,6 +36,7 @@
         <div
           class="col-lg-3 boxCourse boxCourse--3 d-flex align-items-center"
           style="background-image: url('/uploads/trattamenti.svg')"
+           data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"
         >
           <a href="/" class="boxCourse__link"></a>
           <div class="boxCourse__body">
@@ -48,6 +51,7 @@
         <div
           class="col-lg-3 boxCourse boxCourse--4 d-flex align-items-center"
           style="background-image: url('/uploads/travel.svg')"
+           data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"
         >
           <a href="/" class="boxCourse__link"></a>
           <div class="boxCourse__body">
@@ -66,8 +70,8 @@
       <div class="row py-5">
         <div class="col-lg-6 py-3 d-flex align-items-center pr-lg-5">
           <div>
-            <h1>Un angolo d'India a Torino</h1>
-            <p>
+            <h1 class="title">Un angolo d'India a Torino</h1>
+            <p class="description">
               Entrando da Krishna Lila si ha una sensazione di tranquillità e pace, che nel mondo frenetico di oggi si rincorrono quasi fossero un’utopia.
               <br />
               <br />Colpisce il profumo d’ “India” che si diffonde in ogni stanza, la calda atmosfera intensificata dalle luci soffuse.
@@ -92,7 +96,7 @@
       <!-- https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 -->
       <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JeTiK6JLyNE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     </div>
-    <div class="container">
+    <div class="container mb-5 pb-lg-5">
       <div class="row">
         <div class="col-lg-6 py-3 order-1 order-lg-0 d-flex align-items-center">
           <iframe
@@ -105,8 +109,8 @@
         </div>
         <div class="col-lg-6 order-0 order-lg-1 py-3 d-flex align-items-center pl-lg-5">
           <div>
-            <h1>Il nostro centro</h1>
-            <p>
+            <h1 class="title">Il nostro centro</h1>
+            <p class="description">
               L'intento dell’associazione è la piena soddisfazione e la risoluzione di tutti i problemi della persona interessata al proprio equilibrio psicofisico, trasmettendo la consapevolezza che si può stare veramente bene senza l’aiuto della medicina tradizionale, ma con metodi del tutto naturali e con l’aiuto di uno staff altamente specializzato e di un maestro indiano, dotato di un bagaglio decennale di esperienze nell’ambito delle terapie e dei trattamenti ayurvedici.
             </p>
           </div>
@@ -114,6 +118,9 @@
       </div>
       <!-- https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80 -->
       <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JeTiK6JLyNE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+    <div class="container text-center py-5 my-5">
+       <g-image src="~/images/logo-csen.png" class="" />
     </div>
   </Layout>
 </template>
@@ -185,6 +192,10 @@ export default {
 </script>
 
 <style lang="scss">
+.description {
+  font-size: 18px;
+  line-height: 26px;
+}
 iframe {
   border-radius: 10px;
   width:100%;

@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <slot />
+    <Footer />
     <!-- <div class="container mb-40">
       
     </div>-->
@@ -62,9 +63,15 @@
 
 <script>
 import Navbar from "~/components/Navbar.vue";
+import Footer from "~/components/Footer.vue";
+import AOS from "aos";
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
+  },
+  mounted() {
+    AOS.init();
   }
 };
 </script>
@@ -123,6 +130,11 @@ export default {
     width: 160px;
   }
   .nav {
+    &__link {
+      &:hover {
+        color: #743237;
+      }
+    }
     @media screen and (max-width: 992px) {
       padding-top: 30px;
       padding-bottom: 30px;
