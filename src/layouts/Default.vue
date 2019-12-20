@@ -131,8 +131,23 @@ export default {
   }
   .nav {
     &__link {
+      position: relative;
+      &:after {
+        content: "";
+        height: 1px;
+        background-color: #743237;
+        width: 0;
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transition: all 0.2s;
+      }
       &:hover {
         color: #743237;
+        &:after {
+          left: 0%;
+          width: 100%;
+        }
       }
     }
     @media screen and (max-width: 992px) {

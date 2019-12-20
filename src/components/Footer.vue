@@ -12,17 +12,17 @@
             <div class="d-inline-block">
             <h6 class="footer__title mb-2">Scopri di più</h6>
             <ul class="list-unstyled">
-                <li>
-                     <a href="http://">Contatti</a>
+                <li class="mb-2">
+                     <a href="http://" class="footer__link">Contatti</a>
                     
                     
                 </li>
-                <li>
-                    <a href="http://">Blog</a>
+                <li class="mb-2">
+                    <a href="http://" class="footer__link">Blog</a>
                     
                 </li>
-                <li>
-                   <a href="http://">Chi siamo</a>
+                <li class="mb-2">
+                   <a href="http://" class="footer__link">Chi siamo</a>
                 </li>
             </ul>
             </div>
@@ -36,6 +36,7 @@
                 href="https://www.facebook.com/pg/KrishnaLilaMahi/about/"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="footer__social"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
@@ -45,6 +46,7 @@
                 href="https://www.instagram.com/mahikrishnalila/"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="footer__social"
               >
                 <i class="fab fa-instagram"></i>
               </a>
@@ -54,6 +56,7 @@
                 href="https://twitter.com/mahikrishnalila"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="footer__social"
               >
                 <i class="fab fa-twitter"></i>
               </a>
@@ -76,6 +79,36 @@ export default {
 .footer {
   background-color: #743237;
   color: #fff;
+  &__social {
+      transition: all .2s;
+      &:hover {
+          color: #fcb813;
+          i {
+ transform: scale(1.2);
+          }
+         
+      }
+  }
+  &__link {
+      position: relative;
+      &:after {
+        content: "";
+        height: 1px;
+        background-color: #fcb813;
+        width: 0;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transition: all 0.2s;
+      }
+      &:hover {
+        color: #fcb813;
+        &:after {
+          left: 0%;
+          width: 100%;
+        }
+      }
+    }
   li {
   }
   i {
