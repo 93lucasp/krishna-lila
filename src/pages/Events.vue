@@ -7,28 +7,28 @@
     </p>
     <ul>
       <li
-        v-for="event in $page.events.edges"
-        :key="event.id"
+        v-for="course in $page.courses.edges"
+        :key="course.id"
         class="event md:flex p-8 rounded mb-16 bg-primary"
       >
         <div>
-          <div
+          <!-- <div
             class="event__preview bg-cover bg-center rounded md:mr-8 mb-8 md:mb-0"
-            :style="{ 'background-image': 'url(' + event.node.image + ')' }"
-          ></div>
+            :style="{ 'background-image': 'url(' + course.node.image + ')' }"
+          ></div> -->
         </div>
         <div class="event__body">
           <div>
-            <h1 class="text-2xl md:text-3xl font-bold mb-2">{{event.node.title}}</h1>
-            <p class="text-lg md:text-xl mb-4 font-light">{{event.node.abstract}}</p>
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">{{course.node.title}}</h1>
+            <!-- <p class="text-lg md:text-xl mb-4 font-light">{{course.node.teacher}}</p> -->
             <div class="mb-4">
-              <p>
+              <!-- <p>
                 Date:
-                <time>{{event.node.dateMeeting}}</time>
-              </p>
+                <time>{{course.node.date}}</time>
+              </p> -->
             </div>
             <g-link
-              :to="event.node.path"
+              :to="course.node.path"
               class="event__link py-2 px-10 rounded block text-center md:inline-block"
             >Find out more and register</g-link>
           </div>
@@ -39,14 +39,11 @@
 </template>
 <page-query>
 query {
-  events: allEvents {
+  courses: allCourses {
     edges {
       node {
         path
         title
-        abstract
-        image
-        dateMeeting
       }
     }
   }

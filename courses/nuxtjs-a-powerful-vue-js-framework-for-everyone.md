@@ -1,10 +1,9 @@
 ---
 title: NuxtJS a Powerful Vue.js Framework for Everyone
-abstract: >-
-  Let's see why NuxtJS is so powerful and easy to use for all needs (Static  
-  Site Generation, Server side rendering and SPA)
+teacher: mahi
+duration: 60 minutes
 image: /uploads/progetto-senza-titolo-1-.jpg
-dateMeeting: 01-02-2020
+date: 01-02-2020
 ---
 # Details
 

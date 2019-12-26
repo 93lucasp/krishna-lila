@@ -1,8 +1,8 @@
 <template>
   <div class="col-lg-3">
     <div class="courseBox mb-4 d-flex flex-column align-items-center text-center justify-content-center">
-      <a href="http://" class="courseBox__link"></a>
-      <h1 class="courseBox__title">corso testeeqr yeps</h1>
+      <a :href="path" class="courseBox__link"></a>
+      <h1 class="courseBox__title">{{title}}</h1>
       <div class="courseBox__line mt-3"></div>
     </div>
   </div>
@@ -10,7 +10,11 @@
 
 <script>
 export default {
-  name: "CourseBox"
+  name: "CourseBox",
+  props: {
+  title: String,
+  path: String
+}
 };
 </script>
 

@@ -28,8 +28,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'events/**/*.md',
-        typeName: 'Events',
+        path: 'courses/**/*.md',
+        typeName: 'Courses',
         remark: {
           // remark options
         }

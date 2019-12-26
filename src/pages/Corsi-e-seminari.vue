@@ -24,23 +24,28 @@
               </div>
           </div>
         <div class="row py-5 my-5" id="courses">
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
-          <CourseBox />
+            <!-- <li v-for="course in $page.courses.edges">{{course.node.title}}</li> -->
+          <!-- <CourseBox title="My journey with Vue"/> -->
+          <CourseBox v-for="course in $page.courses.edges" :title="course.node.title" :path="course.node.path" :key="course.id"/>
+
         </div>
       </div>
         <Cta />
     </div>
   </Layout>
 </template>
-
+<page-query>
+query {
+  courses: allCourses {
+    edges {
+      node {
+        path
+        title
+      }
+    }
+  }
+}
+</page-query>
 <script>
 import particlesJS from "particles.js";
 import CourseBox from "~/components/CourseBox.vue";
@@ -136,7 +141,8 @@ export default {
         500
       );
     }
-  } // metaInfo: {
+  } 
+  // metaInfo: {
   //   title: "About",
   //   meta: [
   //     { name: 'description', content: 'Articles, snippets, events and newsletter for frontend developers' },

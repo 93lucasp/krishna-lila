@@ -53,11 +53,12 @@
 
 <page-query>
 query ($path: String!) {
-    event: events (path: $path) {
+    course: courses (path: $path) {
       title
-      content
-      dateMeeting
+      teacher
+      duration
       image
+      content
     }
 }
 </page-query>
@@ -70,7 +71,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.event.title
+      title: this.$page.course.title
     };
   }
 };
