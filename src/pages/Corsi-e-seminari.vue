@@ -56,6 +56,7 @@ export default {
     CourseBox
   },
   mounted() {
+    
     const particlesJS = window.particlesJS;
     particlesJS("particles-js", {
       particles: {
