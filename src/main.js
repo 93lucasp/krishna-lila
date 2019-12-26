@@ -6,12 +6,13 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import "aos/dist/aos.css";
 // import vueSmoothScroll from 'vue2-smooth-scroll'
-
+// import VueParticles from 'vue-particles'
 
 export default function (Vue, {router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   // Vue.use(vueSmoothScroll)
+  // Vue.use(VueParticles)
   head.script.push(
   {
     src: 'https://kit.fontawesome.com/97471774c6.js',
