@@ -2,7 +2,7 @@
 title: Meditazione
 teacher: Maestro Mahi
 duration: 60 minuti
-image: /uploads/anupam-mahapatra-vz0rbclzg_w-unsplash-1-.jpg
+image: /uploads/jared-rice-ntybbu66_si-unsplash-1-.jpg
 date: 2019-12-26T16:34:01.543Z
 ---
 Se stai cercando un centro per le tue lezioni di Yoga a Torino, con un maestro indiano in sede che ti possa seguire sul tuo percorso evolutivo e ti possa suggerire le pratiche migliori o correggerti nel tuo percorso devi venire da noi.
