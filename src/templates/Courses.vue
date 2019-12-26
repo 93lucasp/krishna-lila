@@ -19,7 +19,7 @@
       <div class="coursePage__img mx-auto mb-5" :style="{ 'background-image': 'url(' + $page.course.image + ')' }"></div>
       <div class="container mb-5">
         <div class="row">
-          <div class="col-lg-8 mx-auto ">
+          <div class="col-lg-8 mx-auto py-5">
             <p class="coursePage__description" v-html="$page.course.content"></p>
           </div>
         </div>

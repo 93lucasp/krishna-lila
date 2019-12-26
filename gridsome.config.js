@@ -28,7 +28,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'courses/**/*.md',
+        path: 'corsi-e-seminari/**/*.md',
         typeName: 'Courses',
         remark: {
           // remark options
