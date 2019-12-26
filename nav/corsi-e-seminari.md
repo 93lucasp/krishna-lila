@@ -3,7 +3,7 @@ title: CORSI E SEMINARI
 page: corsi-e-seminari
 submenu: true
 title1: Corso di yoga
-page1: /courses/yoga
+page1: /corsi-e-seminari/yoga
 title2: Corso di meditazione
 page2: /corsi-seminari/corso-di-meditazione
 title3: corso di massaggio ayurvedico e riflessologia plantare
