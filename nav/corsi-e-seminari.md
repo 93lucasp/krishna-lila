@@ -1,6 +1,6 @@
 ---
 title: CORSI E SEMINARI
-page: 'javascript:void(0)'
+page: corsi-e-seminari
 submenu: true
 title1: Corso di yoga
 page1: /corsi-seminari/corso-di-yoga
