@@ -84,8 +84,8 @@ export default {
 </script>
 <style lang="scss">
 .btn-primary{
-  background-color: #fcb813;
-  border-color: #fcb813;
+  background-color: #fcb813!important;
+  border-color: #fcb813!important;
   transition: all .2s;
   transform: scale(1);
   &:hover ,&:active,&:focus {
