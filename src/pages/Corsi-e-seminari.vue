@@ -26,7 +26,7 @@
         <div class="row py-5 my-5" id="courses">
             <!-- <li v-for="course in $page.courses.edges">{{course.node.title}}</li> -->
           <!-- <CourseBox title="My journey with Vue"/> -->
-          <CourseBox v-for="course in $page.courses.edges" :title="course.node.title" :path="course.node.path" :key="course.id"/>
+          <CourseBox v-for="course in $page.courses.edges" :title="course.node.title" :path="course.node.path" :image="course.node.image" :key="course.id"/>
 
         </div>
       </div>
@@ -41,6 +41,7 @@ query {
       node {
         path
         title
+        image
       }
     }
   }
