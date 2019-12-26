@@ -1,13 +1,52 @@
 <template>
   <Layout>
-    <div class="eventPage">
-      <h1 class="text-3xl md:text-4xl font-bold mb-6">{{$page.event.title}}</h1>
-      <div
-        class="eventPage__image"
-        :style="{ 'background-image': 'url(' + $page.event.image + ')' }"
-      ></div>
+    <div class="coursePage">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h1 class="text-center mb-5 coursePage__title">Title coursePage</h1>
+            <div class="d-flex align-items-center justify-content-between coursePage__info">
+              <p class="d-flex align-items-center">
+                <i class="fas fa-male mr-2"></i> Maestro Mahi
+              </p>
+              <p class="d-flex align-items-center">
+                <i class="far fa-clock mr-2"></i> 60 minuti
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coursePage__img mx-auto mb-5" style="background-image: url('https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')"></div>
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto ">
+            <p class="coursePage__description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  
+              <var>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem dolore maxime commodi laboriosam rerum mollitia laudantium ipsam assumenda. Excepturi rerum ipsa, ducimus est dolore recusandae enim neque nemo commodi?  </var>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <h1 class="text-3xl md:text-4xl font-bold mb-6">{{$page.event.title}}</h1> -->
+      <!-- <div class="course__image" :style="{ 'background-image': 'url(' + $page.event.image + ')' }"></div>
       <!-- <i><time>{{$page.event.date}}</time></i> -->
-      <div v-html="$page.event.content"></div>
+      <!-- <div v-html="$page.event.content"></div> -->
+      <Cta />
     </div>
   </Layout>
 </template>
@@ -24,7 +63,11 @@ query ($path: String!) {
 </page-query>
 
 <script>
+import Cta from "~/components/Cta.vue";
 export default {
+  components: {
+    Cta
+  },
   metaInfo() {
     return {
       title: this.$page.event.title
@@ -33,57 +76,25 @@ export default {
 };
 </script>
 <style lang="scss">
-.eventPage {
-  background-color: #0e2d43;
-  padding: 50px;
-  margin-bottom: 100px;
-  h1 {
-    margin-top: 30px;
-    font-size: 2em;
-    font-weight: bold;
-    &:first-child {
-      margin-top: 0;
+.coursePage {
+  &__img {
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+  // border-radius: 10px;
+  }
+  &__description{
+    font-weight: 300;
+    font-size: 20px; line-height: 30px;
+    
+  }
+  &__info {
+    font-size: 18px;
+    font-weight: 300;
+    i {
+      font-size: 24px;
     }
   }
-  h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  h3 {
-    font-size: 1.17em;
-    font-weight: bold;
-  }
-  h4 {
-    font-size: 1em;
-    font-weight: bold;
-  }
-  h5 {
-    font-size: .83em;
-    font-weight: bold;
-  }
-  h6 {
-    font-size: .67em;
-    font-weight: bold;
-  }
-  p {
-    
-    font-size: 18px;
-  }
-  ul {
-    list-style: disc;
-    padding-inline-start: 40px;
-  }
-  a {
-    text-decoration: underline;
-  }
-}
-.eventPage__image {
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 5px;
-  margin-bottom: 30px;
 }
 </style>
 

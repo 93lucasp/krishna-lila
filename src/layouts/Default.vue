@@ -72,10 +72,41 @@ export default {
   },
   mounted() {
     AOS.init();
+  },
+  methods: {
+    scrollTo: function(elementToGo) {
+            $('html, body').animate({
+                scrollTop: $(elementToGo).offset().top
+            }, 500);
+        },
   }
 };
 </script>
 <style lang="scss">
+.btn-primary{
+  background-color: #fcb813;
+  border-color: #fcb813;
+  transition: all .2s;
+  transform: scale(1);
+  &:hover ,&:active,&:focus {
+     background-color: #fcb813!important;
+  border-color: #fcb813!important;
+  transform: scale(1.05);
+  }
+}
+.btn-secondary{
+  background-color: #fff;
+  border-color: #fff;
+  transition: all .2s;
+  transform: scale(1);
+  color: #743237;
+  &:hover ,&:active,&:focus {
+     background-color: #fff;
+  border-color: #fff;
+  transform: scale(1.05);
+  color: #743237;
+  }
+}
 .hamburger-container {
   width: 30px;
   height: 20px;
@@ -128,8 +159,11 @@ export default {
   position: relative;
   &__logo {
     width: 160px;
+    z-index: 9;
+    position: relative;
   }
   .nav {
+    z-index: 9;
     &__link {
       position: relative;
       &:after {

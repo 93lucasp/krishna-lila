@@ -21,7 +21,7 @@
                     <a href="http://" class="footer__link">Blog</a>
                     
                 </li>
-                <li class="mb-2">
+                <li class="">
                    <a href="http://" class="footer__link">Chi siamo</a>
                 </li>
             </ul>
