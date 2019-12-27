@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-4">
-    <div class="courseBox mb-4 d-flex align-items-center justify-content-between">
+    <div class="courseBox mb-5 d-flex align-items-center justify-content-between">
       <div class="courseBox__img" :style="{ 'background-image': 'url(' + image + ')' }"></div>
       <a :href="path" class="courseBox__link"></a>
       <div class="courseBox__body">
