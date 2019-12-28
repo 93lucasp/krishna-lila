@@ -38,6 +38,16 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'consulenze-energetiche/**/*.md',
+        typeName: 'Consulting',
+        remark: {
+          // remark options
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'snippets/**/*.md',
         typeName: 'Snippets',
         remark: {

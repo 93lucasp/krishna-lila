@@ -18,6 +18,18 @@ collections:
         - {label: "Image", name: "image", widget: "image"}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
+    - name: "consulting" # Used in routes, e.g., /admin/collections/blog
+      label: "Consulenze energetiche" # Used in the UI
+      folder: "consulenze-energetiche" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Teacher", name: "teacher", widget: "string"}
+        - {label: "Duration", name: "duration", widget: "string"}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
     - name: "snippets" # Used in routes, e.g., /admin/collections/blog
       label: "Snippet" # Used in the UI
       folder: "snippets" # The path to the folder where the documents are stored
@@ -41,7 +53,7 @@ collections:
         - {label: "Link", name: "link", widget: "string"}
         - {label: "Author", name: "author", widget: "string"}
         - {label: "Date", name: "date", widget: "datetime"}
-    - name: "nav" # Used in routes, e.g., /admin/collections/blog
+    - name: "Menù navigazione" # Used in routes, e.g., /admin/collections/blog
       label: "Nav" # Used in the UI
       folder: "nav" # The path to the folder where the documents are stored
       create: true # Allow users to create new documents in this collection
