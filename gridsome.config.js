@@ -48,6 +48,16 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'pictures/**/*.md',
+        typeName: 'Pictures',
+        remark: {
+          // remark options
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'viaggi/**/*.md',
         typeName: 'Travels',
         remark: {

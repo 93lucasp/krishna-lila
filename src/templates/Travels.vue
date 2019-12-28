@@ -7,10 +7,10 @@
             <h1 class="text-center mb-5 coursePage__title">{{$page.travel.title}}</h1>
             <div class="d-flex align-items-center justify-content-between coursePage__info">
               <p class="d-flex align-items-center">
-                <i class="fas fa-male mr-2"></i> {{$page.travel.month}}
+                <i class="far fa-calendar-alt mr-2"></i> {{$page.travel.month}}
               </p>
               <p class="d-flex align-items-center">
-                <i class="fas fa-male mr-2"></i> {{$page.travel.place}}
+                <i class="fas fa-globe-americas mr-2"></i> {{$page.travel.place}}
               </p>
 
               <p class="d-flex align-items-center">

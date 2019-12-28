@@ -44,6 +44,15 @@ collections:
         - {label: "Image", name: "image", widget: "image"}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
+    - name: "pictures" # Used in routes, e.g., /admin/collections/blog
+      label: "Foto Viaggi" # Used in the UI
+      folder: "foto-viaggi" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
     - name: "snippets" # Used in routes, e.g., /admin/collections/blog
       label: "Snippet" # Used in the UI
       folder: "snippets" # The path to the folder where the documents are stored

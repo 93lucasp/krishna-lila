@@ -53,7 +53,7 @@
           style="background-image: url('/uploads/travel.svg')"
            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"
         >
-          <a href="/" class="boxCourse__link"></a>
+          <a href="/viaggi" class="boxCourse__link"></a>
           <div class="boxCourse__body">
             <h1 class="boxCourse__title mb-3">Viaggi</h1>
             <div class="boxCourse__line mb-3"></div>
