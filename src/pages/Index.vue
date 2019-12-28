@@ -8,7 +8,7 @@
           style="background-image: url('/uploads/energy.svg')"
           data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
         >
-          <a href="/" class="boxCourse__link"></a>
+          <a href="/consulenze-energetiche" class="boxCourse__link"></a>
           <div class="boxCourse__body">
             <h1 class="boxCourse__title mb-3">Consulenze <br> energetiche</h1>
             <div class="boxCourse__line mb-3"></div>
