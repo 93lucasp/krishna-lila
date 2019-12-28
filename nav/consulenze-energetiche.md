@@ -1,6 +1,6 @@
 ---
 title: CONSULENZE ENERGETICHE
-page: 'javascript:void(0)'
+page: /consulenze-energetiche
 submenu: true
 title1: Visita ayurvedica
 page1: /consulenze-energetiche/visita-ayurvedica
