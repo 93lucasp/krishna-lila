@@ -1,7 +1,7 @@
 <template>
   <header class="header py-3">
     <div class="container d-lg-flex align-items-center justify-content-between">
-      <g-link to="/" class="nav__link">
+      <g-link to="/" class="">
         <g-image src="~/images/krishna-lila.png" class="header__logo aos-animate" />
       </g-link>
       <nav class="nav">
