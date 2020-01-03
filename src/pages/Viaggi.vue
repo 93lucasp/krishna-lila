@@ -92,6 +92,7 @@ query {
 </page-query>
 <script>
 import myMixin from "~/mixins/mixinCommon.js";
+
 // import particlesJS from "particles.js";
 // require("lightbox2");
 // if (process.client) {
@@ -101,7 +102,7 @@ import myMixin from "~/mixins/mixinCommon.js";
 // import particlesJS from "particles.js";
 import TravelBox from "~/components/TravelBox.vue";
 import Cta from "~/components/Cta.vue";
-
+import lightbox2 from 'lightbox2';
 export default {
   components: {
     Cta,
@@ -109,7 +110,7 @@ export default {
   },
   mixins: [myMixin],
   mounted() {
-    require('lightbox2')
+    // require('lightbox2')
     // window.particlesJS = require('particles.js')
   },
   methods: {}
