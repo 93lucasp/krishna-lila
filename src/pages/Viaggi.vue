@@ -112,6 +112,7 @@ export default {
   mixins: [myMixin],
   mounted() {
     require('lightbox2')
+    lightbox.option({ disableScrolling: true });
     // window.particlesJS = require('particles.js')
   },
   methods: {}
