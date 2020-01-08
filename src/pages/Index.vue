@@ -192,10 +192,7 @@ export default {
 </script>
 
 <style lang="scss">
-.description {
-  font-size: 18px;
-  line-height: 26px;
-}
+
 iframe {
   border-radius: 10px;
   width:100%;

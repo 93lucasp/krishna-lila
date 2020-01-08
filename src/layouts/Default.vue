@@ -83,6 +83,15 @@ export default {
 };
 </script>
 <style lang="scss">
+.description {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.title {
+  font-weight: 500;
+  font-size: 3rem;
+}
 .btn-primary{
   background-color: #fcb813!important;
   border-color: #fcb813!important;

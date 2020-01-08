@@ -13,16 +13,21 @@
             <h6 class="footer__title mb-2">Scopri di più</h6>
             <ul class="list-unstyled">
                 <li class="mb-2">
-                     <a href="http://" class="footer__link">Contatti</a>
-                    
-                    
+                   <g-link
+              to="/chi-siamo"
+              class="footer__link"
+            >Contatti</g-link>
+                   
                 </li>
                 <li class="mb-2">
                     <a href="http://" class="footer__link">Blog</a>
                     
                 </li>
                 <li class="">
-                   <a href="http://" class="footer__link">Chi siamo</a>
+                    <g-link
+              to="/chi-siamo"
+              class="footer__link"
+            >Chi siamo</g-link>
                 </li>
             </ul>
             </div>
