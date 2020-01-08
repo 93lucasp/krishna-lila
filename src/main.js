@@ -6,7 +6,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import "aos/dist/aos.css";
 import "lightbox2/dist/css/lightbox.css";
-// import "lightbox2/dist/css/lightbox.css";
+// import "lightbox2/dist/js/lightbox.js";
 // import vueSmoothScroll from 'vue2-smooth-scroll'
 // import VueParticles from 'vue-particles'
 
