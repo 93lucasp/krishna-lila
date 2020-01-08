@@ -109,7 +109,7 @@ export default {
   },
   mixins: [myMixin],
   mounted() {
-    // require('lightbox2')
+    require('lightbox2')
     // window.particlesJS = require('particles.js')
   },
   methods: {}

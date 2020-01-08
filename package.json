@@ -16,9 +16,11 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-purgecss": "^1.0.12",
     "jquery": "^3.4.1",
+    "lightbox2": "^2.11.1",
     "node-sass": "^4.13.0",
     "particles.js": "^2.0.0",
     "sass-loader": "^8.0.0",
+    "vue-light-gallery": "^1.0.1",
     "vue2-smooth-scroll": "^1.1.1"
   }
 }
