@@ -26,7 +26,7 @@ collections:
         - {label: "Descrizione 1", name: "description1", widget: "markdown"}
         - {label: "Immagine 1", name: "imgDescription1", widget: "image"}
         - {label: "Titolo descrizione 2", name: "titleDescription2", widget: "string"}
-        - {label: "Descrizione 2", name: "description2", widget: "text"}
+        - {label: "Descrizione 2", name: "description2", widget: "markdown"}
     - name: "courses" # Used in routes, e.g., /admin/collections/blog
       label: "Corsi e seminari" # Used in the UI
       folder: "corsi-e-seminari" # The path to the folder where the documents are stored
