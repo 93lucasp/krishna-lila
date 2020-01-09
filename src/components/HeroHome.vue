@@ -1,14 +1,13 @@
 <template>
   <div
     class="heroHome position-relative d-flex align-items-center"
-    style="background-image: url('https://images.pexels.com/photos/268092/pexels-photo-268092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')"
+   :style="{ 'background-image': 'url(' + image + ')' }"
   >
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
           <h1 class="heroHome__title" data-aos="fade-up" data-aos-duration="2000">
-            "Lo yoga non prende tempo, ti restituisce il tempo."
-            <br />- Ganga Bianco
+           {{title}}
           </h1>
         </div>
       </div>
@@ -18,7 +17,11 @@
 
 <script>
 export default {
-  name: "HeroHome"
+  name: "HeroHome",
+  props: {
+  title: String,
+  image: String,
+}
 };
 </script>
 

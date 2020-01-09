@@ -1,7 +1,12 @@
 <template>
-  <Layout class="position-relative">
-    <HeroHome />
+  <Layout class="position-relative" >
+    <div v-for="text in $page.texts.edges" :key="text.id">
+
+    
+    <HeroHome :title="text.node.headerTitle" :image="text.node.headerImage" />
+   
     <div class="container-fluid">
+
       <div class="row">
         <div
           class="col-lg-3 boxCourse boxCourse--1 d-flex align-items-center"
@@ -10,11 +15,11 @@
         >
           <a href="/consulenze-energetiche" class="boxCourse__link"></a>
           <div class="boxCourse__body">
-            <h1 class="boxCourse__title mb-3">Consulenze <br> energetiche</h1>
+            <h1 class="boxCourse__title mb-3">{{text.node.consultingTitle}}</h1>
             <div class="boxCourse__line mb-3"></div>
             <p
               class="boxCourse__description mb-4"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            >{{text.node.consultingDescription}}</p>
             <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
           </div>
         </div>
@@ -25,11 +30,11 @@
         >
           <a href="/corsi-e-seminari" class="boxCourse__link"></a>
           <div class="boxCourse__body">
-            <h1 class="boxCourse__title mb-3">Corsi</h1>
+            <h1 class="boxCourse__title mb-3">{{text.node.courseTitle}}</h1>
             <div class="boxCourse__line mb-3"></div>
             <p
               class="boxCourse__description mb-4"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            >{{text.node.courseDescription}}</p>
             <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
           </div>
         </div>
@@ -40,11 +45,11 @@
         >
           <a href="/" class="boxCourse__link"></a>
           <div class="boxCourse__body">
-            <h1 class="boxCourse__title mb-3">Trattamenti</h1>
+            <h1 class="boxCourse__title mb-3">{{text.node.treatmentsTitle}}</h1>
             <div class="boxCourse__line mb-3"></div>
             <p
               class="boxCourse__description mb-4"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            >{{text.node.treatmentsDescription}}</p>
             <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
           </div>
         </div>
@@ -55,11 +60,11 @@
         >
           <a href="/viaggi" class="boxCourse__link"></a>
           <div class="boxCourse__body">
-            <h1 class="boxCourse__title mb-3">Viaggi</h1>
+            <h1 class="boxCourse__title mb-3">{{text.node.travelTitle}}</h1>
             <div class="boxCourse__line mb-3"></div>
             <p
               class="boxCourse__description mb-4"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit sit amet consectetur adipisicing.</p>
+            >{{text.node.travelDescription}}</p>
             <!-- <a href="http://" class="btn boxCourse__btn">Scopri di più</a> -->
           </div>
         </div>
@@ -70,26 +75,17 @@
       <div class="row py-5">
         <div class="col-lg-6 py-3 d-flex align-items-center pr-lg-5">
           <div>
-            <h1 class="title">Un angolo d'India a Torino</h1>
+             
+            <h1 class="title">{{text.node.titleDescription1}}</h1>
             <p class="description">
-              Entrando da Krishna Lila si ha una sensazione di tranquillità e pace, che nel mondo frenetico di oggi si rincorrono quasi fossero un’utopia.
-              <br />
-              <br />Colpisce il profumo d’ “India” che si diffonde in ogni stanza, la calda atmosfera intensificata dalle luci soffuse.
-              <br />In tutto l’ambiente pervadono mantra e musiche indiane.
-              <br />
-              <br />La decorazione del centro è studiata con cura per trasmettere la cultura e la serietà di questo luogo.
-              <br />
-              <br />Le tensioni si allentano e si percepisce un luogo nuovo, distante dai problemi e dai pensieri quotidiani.
-              <br />
-              <br />Le affidabili parole del maestro spirituale sanno guidarti verso un percorso positivo, i sorrisi e la gentilezza dello staff infondono pace e benessere,
-              le mani sapienti delle operatrici sanno donare leggerezza e la ricercatezza degli unguenti indiani completa il tutto.
+             {{text.node.description1}}
             </p>
           </div>
         </div>
         <div class="col-lg-6 py-3 d-flex align-items-center">
           <div
             class="about-image"
-            style="background-image: url('https://images.unsplash.com/photo-1528293319334-2b98c83a27fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80')"
+            :style="{ 'background-image': 'url(' + text.node.imgDescription1 + ')' }"
           ></div>
         </div>
       </div>
@@ -109,9 +105,9 @@
         </div>
         <div class="col-lg-6 order-0 order-lg-1 py-3 d-flex align-items-center pl-lg-5">
           <div>
-            <h1 class="title">Il nostro centro</h1>
+            <h1 class="title">{{text.node.titleDescription2}}</h1>
             <p class="description">
-              L'intento dell’associazione è la piena soddisfazione e la risoluzione di tutti i problemi della persona interessata al proprio equilibrio psicofisico, trasmettendo la consapevolezza che si può stare veramente bene senza l’aiuto della medicina tradizionale, ma con metodi del tutto naturali e con l’aiuto di uno staff altamente specializzato e di un maestro indiano, dotato di un bagaglio decennale di esperienze nell’ambito delle terapie e dei trattamenti ayurvedici.
+              {{text.node.description2}}
             </p>
           </div>
         </div>
@@ -122,20 +118,30 @@
     <div class="container text-center py-5 my-5">
        <g-image src="~/images/logo-csen.png" class="" />
     </div>
+    </div>
   </Layout>
 </template>
 
 <page-query>
 query {
-  articles: allArticles(order: DESC) {
+  texts: allHome {
     edges {
       node {
-        title
-        abstract
-        image
-        link
-        date
-        author
+        headerImage
+        headerTitle
+        consultingTitle
+        consultingDescription
+        courseTitle
+        courseDescription
+        treatmentsTitle
+        treatmentsDescription
+        travelTitle
+        travelDescription
+        titleDescription1
+        description1
+        imgDescription1
+        titleDescription2
+        description2
       }
     }
   }
