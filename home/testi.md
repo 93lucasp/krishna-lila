@@ -14,6 +14,6 @@ travelDescription: lorem ipsum
 titleDescription1: Un angolo d'India a Torino
 imgDescription1: uploads/photo-1528293319334-2b98c83a27fd.jpeg
 titleDescription2: Il nostro centro
-
+description2: lorem ipsum
 ---
 
