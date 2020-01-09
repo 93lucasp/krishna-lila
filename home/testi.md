@@ -1,8 +1,7 @@
 ---
 headerImage: uploads/pexels-photo-268092.jpeg
-headerTitle: |-
+headerTitle: |
   "Lo yoga non prende tempo, ti restituisce il tempo."
-  - Ganga Bianco
 consultingTitle: Consulenze Energetiche
 consultingDescription: lorem ipsum
 courseTitle: Corsi
