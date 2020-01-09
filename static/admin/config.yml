@@ -23,10 +23,10 @@ collections:
         - {label: "Titolo viaggi", name: "travelTitle", widget: "string"}
         - {label: "Descrizione viaggi", name: "travelDescription", widget: "string"}
         - {label: "Titolo descrizione 1", name: "titleDescription1", widget: "string"}
-        - {label: "Descrizione 1", name: "body1", widget: "markdown"}
+        - {label: "Descrizione 1", name: "body", widget: "markdown"}
         - {label: "Immagine 1", name: "imgDescription1", widget: "image"}
         - {label: "Titolo descrizione 2", name: "titleDescription2", widget: "string"}
-        - {label: "Descrizione 2", name: "body2", widget: "markdown"}
+        - {label: "Descrizione 2", name: "description2", widget: "text"}
     - name: "courses" # Used in routes, e.g., /admin/collections/blog
       label: "Corsi e seminari" # Used in the UI
       folder: "corsi-e-seminari" # The path to the folder where the documents are stored
