@@ -77,9 +77,10 @@
           <div>
              
             <h1 class="title">{{text.node.titleDescription1}}</h1>
-            <p class="description">
-             {{text.node.description1}}
+            
+            <p class="description" v-html="text.node.description1">
             </p>
+            <!-- <div v-html="text.node.description1"></div> -->
           </div>
         </div>
         <div class="col-lg-6 py-3 d-flex align-items-center">
@@ -106,8 +107,7 @@
         <div class="col-lg-6 order-0 order-lg-1 py-3 d-flex align-items-center pl-lg-5">
           <div>
             <h1 class="title">{{text.node.titleDescription2}}</h1>
-            <p class="description">
-              {{text.node.description2}}
+            <p class="description" v-html="text.node.description2">
             </p>
           </div>
         </div>
