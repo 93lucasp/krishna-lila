@@ -78,8 +78,7 @@
              
             <h1 class="title">{{text.node.titleDescription1}}</h1>
             
-            <p class="description" v-html="text.node.content">
-            </p>
+            <p class="description" v-html="text.node.content"></p>
             <!-- <div v-html="text.node.description1"></div> -->
           </div>
         </div>
