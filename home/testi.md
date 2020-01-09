@@ -13,22 +13,29 @@ travelTitle: Viaggi
 travelDescription: lorem ipsum
 titleDescription1: Un angolo d'India a Torino
 description1: >-
-  Entrando da Krishna Lila si ha una sensazione di tranquillità e pace, che nel
-  mondo frenetico di oggi si rincorrono quasi fossero un’utopia.
+  Entrando da **Krishna Lila** si ha una sensazione di tranquillità e pace, che
+  nel mondo frenetico di oggi si rincorrono quasi fossero un’utopia.
+
+
 
 
   Colpisce il profumo d’ “India” che si diffonde in ogni stanza, la calda
-  atmosfera intensificata dalle luci soffuse.
+  atmosfera intensificata dalle luci soffuse. In tutto l’ambiente pervadono
+  mantra e musiche indiane.
 
-  In tutto l’ambiente pervadono mantra e musiche indiane.
+
 
 
   La decorazione del centro è studiata con cura per trasmettere la cultura e la
   serietà di questo luogo.
 
 
+
+
   Le tensioni si allentano e si percepisce un luogo nuovo, distante dai problemi
   e dai pensieri quotidiani.
+
+
 
 
   Le affidabili parole del maestro spirituale sanno guidarti verso un percorso
