@@ -138,10 +138,8 @@ query {
         travelTitle
         travelDescription
         titleDescription1
-        description1
         imgDescription1
         titleDescription2
-        description2
       }
     }
   }
