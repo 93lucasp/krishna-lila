@@ -17,7 +17,7 @@
     "gridsome-plugin-purgecss": "^1.0.12",
     "jquery": "^3.4.1",
     "lightbox2": "^2.11.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "particles.js": "^2.0.0",
     "sass-loader": "^8.0.0",
     "vue-light-gallery": "^1.0.1",
